@@ -1,3 +1,6 @@
+# Game Trốn thoát khỏi 12c10
+<details>
+<summary>More infomation about Minesweeper origin project</summary>
 # Minesweeper using the Recursion Algorithm
 A simplified game of minesweeper using vanilla JavaScript
 
@@ -48,3 +51,4 @@ The above copyright notice and this permission notice shall be included in all c
 *Translation: Ofcourse you can use this for you project! Just make sure to say where you got this from :)
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+</details>
