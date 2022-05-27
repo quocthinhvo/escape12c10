@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //show ALL the bombs
     squares.forEach(square => {
       if (square.classList.contains('bomb')) {
-        square.innerHTML = '<img src="skin/tea/' + randomInt(46,51) + '.png">';
+        square.innerHTML = '<img src="skin/tea/' + randomInt(45,65) + '.png">';
         square.classList.remove('bomb')
         square.classList.add('checked')
       }
