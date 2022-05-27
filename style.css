@@ -74,3 +74,19 @@ img {
   width: 37px;
   border-radius: 10%;
 }
+
+.header-left {
+  text-align: left;
+  width: 40%;
+  float: left;
+  padding: 15px;
+  font-size: 15px;
+}
+
+.header-right {
+  text-align: right;
+  width: 40%;
+  float: right;
+  padding: 15px;
+  font-size: 15px;
+}
