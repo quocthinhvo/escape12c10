@@ -66,3 +66,9 @@ div {
   margin-top: 5px;
   color: #e76346;
 }
+
+img {
+  height: 40px;
+  width: 40px;
+  border: 5px solid;
+}
