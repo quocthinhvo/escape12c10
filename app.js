@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
   let squares = []
   let isGameOver = false
 
+  //random int
+  function randomInt(start, end){
+      return Math.round(Math.random() * (start - end) + end)
+  }
   //create Board
   function createBoard() {
     flagsLeft.innerHTML = bombAmount
@@ -166,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //show ALL the bombs
     squares.forEach(square => {
       if (square.classList.contains('bomb')) {
-        square.innerHTML = '<img src="skin/tea/1.png">'
+        square.innerHTML = '<img src="skin/tea/' + randomInt(46,51) + '.png">';
         square.classList.remove('bomb')
         square.classList.add('checked')
       }
