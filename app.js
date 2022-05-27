@@ -7,11 +7,20 @@ document.addEventListener('DOMContentLoaded', () => {
   let flags = 0
   let squares = []
   let isGameOver = false
+  let timeCount = 0;
+  setInterval(setTime, 1000);
 
+  function setTime() {
+    if (!isGameOver) {
+      ++timeCount;
+      document.getElementById("time-count").innerHTML = timeCount;
+    }   
+  }
   //random int
   function randomInt(start, end){
       return Math.round(Math.random() * (start - end) + end)
   }
+
   //create Board
   function createBoard() {
     flagsLeft.innerHTML = bombAmount
