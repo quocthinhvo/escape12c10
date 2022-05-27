@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
       gameOver(square)
     } else {
       let total = square.getAttribute('data')
+      square.innerHTML = '<img src="skin/stu/' + randomInt(1,44) + '.png">'
       if (total !=0) {
         square.classList.add('checked')
         if (total == 1) square.classList.add('one')
@@ -98,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (total == 4) square.classList.add('four')
         square.innerHTML = total
         return
-      }
+      } 
       checkSquare(square, currentId)
     }
     square.classList.add('checked')
