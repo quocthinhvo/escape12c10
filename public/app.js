@@ -9,12 +9,34 @@ document.addEventListener('DOMContentLoaded', () => {
   let isGameOver = false
   let timeCount = 0;
   setInterval(setTime, 1000);
+  let audioGameover = new Audio('sound/game_over.mp3');
+  let audioWin = new Audio('sound/win.mp3');
+  let audioClick = new Audio('sound/click.mp3');
+  let audioCheckmine = new Audio('sound/check_mine.mp3');
+  let audioNomine = new Audio('sound/no_mine.mp3');
 
   function setTime() {
     if (!isGameOver) {
       ++timeCount;
       document.getElementById("time-count").innerHTML = timeCount;
     }   
+  }
+
+  //fucntion play sound
+  function soundGameover(){
+    audioGameover.play();
+  }
+  function soundWin(){
+    audioWin.play();
+  }
+  function soundClick(){
+    audioClick.play();
+  }
+  function soundCheckmine() {
+    audioCheckmine.play();
+  }
+  function soundNomine(){
+    audioNomine.play();
   }
   //random int
   function randomInt(start, end){
@@ -78,12 +100,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!square.classList.contains('flag')) {
         square.classList.add('flag')
         square.innerHTML = ' 🚩'
+        soundCheckmine()
         flags ++
         flagsLeft.innerHTML = bombAmount- flags
         checkForWin()
       } else {
         square.classList.remove('flag')
         square.innerHTML = ''
+        soundNomine()
         flags --
         flagsLeft.innerHTML = bombAmount- flags
       }
@@ -98,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (square.classList.contains('bomb')) {
       gameOver(square)
     } else {
+      soundClick()
       let total = square.getAttribute('data')
       square.innerHTML = '<img src="skin/stu/' + randomInt(1,44) + '.png">'
       if (total !=0) {
@@ -175,6 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //game over
   function gameOver(square) {
     result.innerHTML = 'BOOM! Game Over!'
+    soundGameover()
     isGameOver = true
 
     //show ALL the bombs
@@ -198,6 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       if (matches === bombAmount) {
         result.innerHTML = 'YOU WIN!'
+        soundWin()
         isGameOver = true
       }
     }
