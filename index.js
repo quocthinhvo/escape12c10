@@ -7,6 +7,7 @@ var app = express();
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(morgan("common"))
+const port = process.env.PORT || 3000
 
 mongoose.connect(process.env.DBSTR);
 var winnerSchema = mongoose.Schema({
@@ -78,4 +79,4 @@ app.get("/user/:username", function (req, res) {
       res.status(500).send({message: "Some error with database"})
    })
 })
-app.listen(8000);
+app.listen(port);
