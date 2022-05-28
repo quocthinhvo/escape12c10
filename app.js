@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const flagsLeft = document.querySelector('#flags-left')
   const result = document.querySelector('#result')
   let width = 10
-  let bombAmount = 20
+  let bombAmount = 1
   let flags = 0
   let squares = []
   let isGameOver = false
@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!isGameOver & isGamestart) {
       ++timeCount; 
       document.getElementById("time-count").innerHTML = timeCount;
+      document.getElementById("ftime").value = timeCount;
     }
   }
 
