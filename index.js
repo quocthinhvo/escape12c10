@@ -1,12 +1,16 @@
 var express = require('express');
 const url = require('url')
 var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
+var multer = require('multer');
 var morgan = require("morgan")
 var cors = require('cors')
 const getEnv = require('dotenv').config()
 var app = express();
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use(bodyParser.json()); 
+app.use(bodyParser.urlencoded({ extended: true })); 
 app.use(morgan("common"))
 app.use(cors())
 
