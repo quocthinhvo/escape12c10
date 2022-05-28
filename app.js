@@ -9,7 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
   let isGameOver = false
   let timeCount = 0;
   setInterval(setTime, 1000);
-
+  let audioGameover = new Audio('sound/game_over.mp3');
+  let audioWin = new Audio('sound/win.mp3');
+  let audioClick = new Audio('sound/click.mp3');
+  let audioCheckmine = new Audio('sound/check_mine.mp3');
+  let audioNomine = new Audio('sound/no_mine.mp3');
 
   function setTime() {
     if (!isGameOver) {
@@ -20,24 +24,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //fucntion play sound
   function soundGameover(){
-    let audio = new Audio('sound/game_over.mp3');
-    audio.play();
+    audioGameover.play();
   }
   function soundWin(){
-    let audio = new Audio('sound/win.mp3');
-    audio.play();
+    audioWin.play();
   }
   function soundClick(){
-    let audio = new Audio('sound/click.mp3');
-    audio.play();
+    audioClick.play();
   }
   function soundCheckmine() {
-    let audio = new Audio('sound/check_mine.mp3');
-    audio.play();
+    audioCheckmine.play();
   }
   function soundNomine(){
-    let audio = new Audio('sound/no_mine.mp3');
-    audio.play();
+    audioNomine.play();
   }
   //random int
   function randomInt(start, end){
