@@ -40,18 +40,31 @@
     <span class="helper"></span>
     <div>
         <div class="popupCloseButton">&times;</div>
-        <h3 style="color: red">Game Over</h3>
+        <h3 style="color: red">Thua rồi hihi</h3>
         <p id="gameoverStr"></p>
         <button class="buttonPoup" onClick="location.reload();">Chơi lại</button>
     </div>
   </div>
-  <div class="hover_bkgr_fricc" id="poupWin">
+  <!-- <div class="hover_bkgr_fricc" id="poupWin">
     <span class="helper"></span>
     <div>
         <div class="popupCloseButton">&times;</div>
         <h3 style="color: green">Thắng rồi đó</h3>
         <p id="winStr"></p>
         <button class="buttonPoup" onClick="location.reload();">Chơi lại</button>
+    </div>
+  </div> -->
+  <div class="hover_bkgr_fricc_win" id="poupWin">
+    <span class="helper"></span>
+    <div>
+        <div class="popupCloseButton">&times;</div>
+        <h3 style="color: green">Thắng rồi đó</h3>
+        <p id="winStr"></p>
+        <form>
+          <input type="text" id="fname" name="fname" required>
+          <!-- <button class="buttonPoup" onClick="location.reload();">Chơi lại</button> -->
+          <input type="submit" value="Lưu kết quả" class="buttonPoup">
+        </form> 
     </div>
   </div>
 </body>

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const flagsLeft = document.querySelector('#flags-left')
   const result = document.querySelector('#result')
   let width = 10
-  let bombAmount = 20
+  let bombAmount = 1
   let flags = 0
   let squares = []
   let isGameOver = false
@@ -23,12 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   // config poup
   $('#poupIntro').show();
-  $('.hover_bkgr_fricc').click(function () {
-    $('.hover_bkgr_fricc').hide();
-  });
   $('#popupCloseButton').click(function () {
     $('.hover_bkgr_fricc').hide();
   });
+  $('.hover_bkgr_fricc').click(function () {
+    $('.hover_bkgr_fricc').hide();
+  });
+
   // ngẫu nhiên câu chào
   document.getElementById("introStr").innerHTML = introStr[randomInt(0, introStr.length-1)]
   

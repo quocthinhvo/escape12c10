@@ -6,7 +6,8 @@ introStr = [
     "Chuẩn bị cho mình kiến thức toán xác suất đi vì cái này đòi hỏi trình cao lắm :)",
     "Toán học + nhân phẩm + nhạy bén sẽ là chìa khoá giúp bạn tìm ra 20 giáo viên và thoát khỏi 12c10",
     "Có đến 98% số người chơi đã chơi liên tiếp 5 lần mà vẫn thua",
-    "Bạn nghĩ bạn thông minh và may mắn? hãy chơi trò này"
+    "Bạn nghĩ bạn thông minh và may mắn? hãy chơi trò này",
+    "Nhanh tay lẹ mắt tìm ra 20 giáo viên núp trong đây"
 ]
 
 gameoverStr= [
