@@ -22,12 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
     return Math.round(Math.random() * (start - end) + end)
   }
   // config poup
-  $('.hover_bkgr_fricc').show();
-  $('.hover_bkgr_fricc').click(function () {
-    $('.hover_bkgr_fricc').hide();
+  $('#poupIntro').show();
+  $('#poupIntro').click(function () {
+    $('#poupIntro').hide();
   });
-  $('.popupCloseButton').click(function () {
-    $('.hover_bkgr_fricc').hide();
+  $('#popupCloseButton').click(function () {
+    $('#poupIntro').hide();
   });
   // ngẫu nhiên câu chào
   document.getElementById("introStr").innerHTML = introStr[randomInt(0, introStr.length-1)]
