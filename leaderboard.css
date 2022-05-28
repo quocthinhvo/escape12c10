@@ -1,10 +1,12 @@
 
+#rank {
+    width: 100%;
+}
 #rank td,
 #rank th {
     border: 1px solid #ddd;
     padding: 8px;
     font-size: 15px;
-    width: 100%;
 }
 
 #rank tr:nth-child(even) {
