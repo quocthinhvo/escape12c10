@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let squares = []
   let isGameOver = false
   let timeCount = 0;
-  setInterval(setTime, 1000);
   // init sound
   let audioGameover = new Audio('sound/game_over.mp3');
   let audioWin = new Audio('sound/win.mp3');
@@ -19,11 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
   $('.hover_bkgr_fricc').show();
   $('.hover_bkgr_fricc').click(function () {
     $('.hover_bkgr_fricc').hide();
+    setInterval(setTime, 1000);
   });
   $('.popupCloseButton').click(function () {
     $('.hover_bkgr_fricc').hide();
+    setInterval(setTime, 1000);
+
   });
-  
+
   function setTime() {
     if (!isGameOver) {
       ++timeCount;
