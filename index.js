@@ -49,8 +49,8 @@ app.post('/add', function (req, res) {
             res.send({
                "message": "error",
                "content": err
-            }).statusCode(500)
-         } else res.send({"message": "OK"}).status(200)
+            }).status(500)
+         } else res.redirect(301, "https://quocthinhvo.dev/escape12c10");
       })
    }
 })
