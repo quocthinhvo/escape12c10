@@ -7,7 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
   let flags = 0
   let squares = []
   let isGameOver = false
+  let isGamestart = false
+  // init timer
   let timeCount = 0;
+  setInterval(setTime, 1000);
   // init sound
   let audioGameover = new Audio('sound/game_over.mp3');
   let audioWin = new Audio('sound/win.mp3');
@@ -18,17 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
   $('.hover_bkgr_fricc').show();
   $('.hover_bkgr_fricc').click(function () {
     $('.hover_bkgr_fricc').hide();
-    setInterval(setTime, 1000);
   });
   $('.popupCloseButton').click(function () {
     $('.hover_bkgr_fricc').hide();
-    setInterval(setTime, 1000);
-
   });
-
+  
   function setTime() {
-    if (!isGameOver) {
-      ++timeCount;
+    if (!isGameOver & isGamestart) {
+      ++timeCount; 
       document.getElementById("time-count").innerHTML = timeCount;
     }
   }
@@ -127,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //click on square actions
   function click(square) {
+    isGamestart = true
     let currentId = square.id
     if (isGameOver) return
     if (square.classList.contains('checked') || square.classList.contains('flag')) return
