@@ -29,3 +29,11 @@ gameoverStr= [
     "Đọc sách giáo khoa không thì sao mà thắng nổi",
     "Tưởng dễ ăn vậy sao?"
 ]
+
+winStr = [
+    "Hay lắm bạn trẻ",
+    "Chơi game mà hên",
+    "Không có lần thứ hai đâu",
+    "Fact: người code ra game này chơi còn không thắng",
+    "Học phải đi đôi với ứng dụng vậy mới là giỏi"
+]

@@ -213,8 +213,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //game over
   function gameOver(square) {
-    result.innerHTML = 'BOOM! Game Over!'
-    document.getElementById("gameoverStr").innerHTML = gameoverStr[randomInt(0, introStr.length-1)]
+    result.innerHTML = 'Thua rồi nha bạn'
+    document.getElementById("gameoverStr").innerHTML = gameoverStr[randomInt(0, winStr.length-1)]
     $('#poupGameover').show();
     soundGameover()
     isGameOver = true
@@ -239,7 +239,9 @@ document.addEventListener('DOMContentLoaded', () => {
         matches++
       }
       if (matches === bombAmount) {
-        result.innerHTML = 'YOU WIN!'
+        result.innerHTML = 'Thắng rồi đó'
+        document.getElementById("winStr").innerHTML = winStr[randomInt(0, winStr.length-1)]
+        $('#poupWin').show();
         soundWin()
         isGameOver = true
       }
