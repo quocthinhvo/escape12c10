@@ -2,11 +2,23 @@ var express = require('express');
 const url = require('url')
 var mongoose = require('mongoose');
 var morgan = require("morgan")
+var cors = require('cors')
 const getEnv = require('dotenv').config()
 var app = express();
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(morgan("common"))
+app.use(cors())
+var whitelist = ['https://www.quocthinhvo.dev']
+var corsOptions = {
+   origin: function (origin, callback) {
+     if (whitelist.indexOf(origin) !== -1) {
+       callback(null, true)
+     } else {
+       callback(new Error('Not allowed by CORS'))
+     }
+   }
+ }
 const port = process.env.PORT || 3000
 
 mongoose.connect(process.env.DBSTR);
@@ -17,13 +29,13 @@ var winnerSchema = mongoose.Schema({
 });
 var Winner = mongoose.model("winner", winnerSchema);
 
-app.get('/', function(req, res){
+app.get('/',cors(corsOptions), function(req, res){
    res.send({
       "message": "REST API zone"
    }).status(200)
 });
 
-app.post('/add', function (req, res) {
+app.post('/add', cors(corsOptions),function (req, res) {
    let datetime = new Date();
    let winnerData = req.body;
    if (!winnerData.name || !winnerData.time) {
@@ -48,7 +60,7 @@ app.post('/add', function (req, res) {
    }
 })
 
-app.get("/ranks", function (req, res) {
+app.get("/ranks",cors(corsOptions), function (req, res) {
    let top = req.query.top
    Winner.find()
    .limit(top)
@@ -63,7 +75,7 @@ app.get("/ranks", function (req, res) {
    })
 })
 
-app.get("/user/:username", function (req, res) {
+app.get("/user/:username", cors(corsOptions), function (req, res) {
    let username = req.params.username
    let num = 10;
    num = req.query.num;
