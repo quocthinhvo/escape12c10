@@ -10,11 +10,34 @@ document.addEventListener('DOMContentLoaded', () => {
   let timeCount = 0;
   setInterval(setTime, 1000);
 
+
   function setTime() {
     if (!isGameOver) {
       ++timeCount;
       document.getElementById("time-count").innerHTML = timeCount;
     }   
+  }
+
+  //fucntion play sound
+  function soundGameover(){
+    let audio = new Audio('sound/game_over.mp3');
+    audio.play();
+  }
+  function soundWin(){
+    let audio = new Audio('sound/win.mp3');
+    audio.play();
+  }
+  function soundClick(){
+    let audio = new Audio('sound/click.mp3');
+    audio.play();
+  }
+  function soundCheckmine() {
+    let audio = new Audio('sound/check_mine.mp3');
+    audio.play();
+  }
+  function soundNomine(){
+    let audio = new Audio('sound/no_mine.mp3');
+    audio.play();
   }
   //random int
   function randomInt(start, end){
@@ -78,12 +101,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!square.classList.contains('flag')) {
         square.classList.add('flag')
         square.innerHTML = ' 🚩'
+        soundCheckmine()
         flags ++
         flagsLeft.innerHTML = bombAmount- flags
         checkForWin()
       } else {
         square.classList.remove('flag')
         square.innerHTML = ''
+        soundNomine()
         flags --
         flagsLeft.innerHTML = bombAmount- flags
       }
@@ -98,6 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (square.classList.contains('bomb')) {
       gameOver(square)
     } else {
+      //soundClick()
+      setTimeout(20, soundClick())
       let total = square.getAttribute('data')
       square.innerHTML = '<img src="skin/stu/' + randomInt(1,44) + '.png">'
       if (total !=0) {
@@ -175,6 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //game over
   function gameOver(square) {
     result.innerHTML = 'BOOM! Game Over!'
+    soundGameover()
     isGameOver = true
 
     //show ALL the bombs
@@ -198,6 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       if (matches === bombAmount) {
         result.innerHTML = 'YOU WIN!'
+        soundWin()
         isGameOver = true
       }
     }
