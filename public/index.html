@@ -4,13 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
   <title>Trốn thoát khỏi 12C10</title>
+  <script src="bootstrap/js/jquery.min.js"></script>
   <link rel="stylesheet" href="style.css"></link>
+  <script src="str/str.js"></script>
+  <script src="str/qoutes.js"></script>
   <script src="app.js" charset="utf-8"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
-  <script src="bootstrap/js/jquery.min.js"></script>
 </head>
 <body>
-  
+  <div class="hover_bkgr_fricc" id="poupIntro">
+    <span class="helper"></span>
+    <div>
+        <div class="popupCloseButton">&times;</div>
+        <p id="introStr"></p>
+    </div>
+  </div>
   <div class="container">
     <div class="topnav" >
       <a href="index.html">New</a>
@@ -28,6 +36,23 @@
       <p>Bản quyền © 2021 <a href="https://www.quocthinhvo.dev">@quocthinhvo</a></p>
     </div>
   </div>
- 
+  <div class="hover_bkgr_fricc" id="poupGameover">
+    <span class="helper"></span>
+    <div>
+        <div class="popupCloseButton">&times;</div>
+        <h3 style="color: red">Game Over</h3>
+        <p id="gameoverStr"></p>
+        <button class="buttonPoup" onClick="location.reload();">Chơi lại</button>
+    </div>
+  </div>
+  <div class="hover_bkgr_fricc" id="poupWin">
+    <span class="helper"></span>
+    <div>
+        <div class="popupCloseButton">&times;</div>
+        <h3 style="color: green">Thắng rồi đó</h3>
+        <p id="winStr"></p>
+        <button class="buttonPoup" onClick="location.reload();">Chơi lại</button>
+    </div>
+  </div>
 </body>
 </html>
