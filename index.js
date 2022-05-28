@@ -12,19 +12,20 @@ app.use(express.urlencoded({ extended: true }))
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({ extended: true })); 
 app.use(morgan("common"))
+app.use(cors())
 
 const port = process.env.PORT || 3000
 
-var whitelist = ['https://escape12c10.herokuapp.com', 'https://www.quocthinhvo.dev']
-var corsOptions = {
-   origin: function (origin, callback) {
-     if (whitelist.indexOf(origin) !== -1 || !origin) {
-       callback(null, true)
-     } else {
-       callback(new Error('Not allowed by CORS'))
-     }
-   }
- }
+// var whitelist = ['https://escape12c10.herokuapp.com', 'https://www.quocthinhvo.dev']
+// var corsOptions = {
+//    origin: function (origin, callback) {
+//      if (whitelist.indexOf(origin) !== -1 || !origin) {
+//        callback(null, true)
+//      } else {
+//        callback(new Error('Not allowed by CORS'))
+//      }
+//    }
+//  }
 
 mongoose.connect(process.env.DBSTR);
 var winnerSchema = mongoose.Schema({
@@ -40,7 +41,7 @@ app.get('/', function(req, res){
    }).status(200)
 });
 
-app.post('/add', cors(corsOptions), function (req, res) {
+app.post('/add',  function (req, res) {
    let datetime = new Date();
    let winnerData = req.body;
    if (!winnerData.name || !winnerData.time) {
@@ -65,7 +66,7 @@ app.post('/add', cors(corsOptions), function (req, res) {
    }
 })
 
-app.get("/ranks",cors(corsOptions), function (req, res) {
+app.get("/ranks", function (req, res) {
    let top = req.query.top
    Winner.find()
    .limit(top)
@@ -80,7 +81,7 @@ app.get("/ranks",cors(corsOptions), function (req, res) {
    })
 })
 
-app.get("/user/:username", cors(corsOptions), function (req, res) {
+app.get("/user/:username", function (req, res) {
    let username = req.params.username
    let num = 10;
    num = req.query.num;
