@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   // config poup
   $('#poupIntro').show();
-  $('#poupIntro').click(function () {
-    $('#poupIntro').hide();
+  $('.hover_bkgr_fricc').click(function () {
+    $('.hover_bkgr_fricc').hide();
   });
   $('#popupCloseButton').click(function () {
-    $('#poupIntro').hide();
+    $('.hover_bkgr_fricc').hide();
   });
   // ngẫu nhiên câu chào
   document.getElementById("introStr").innerHTML = introStr[randomInt(0, introStr.length-1)]
@@ -214,6 +214,8 @@ document.addEventListener('DOMContentLoaded', () => {
   //game over
   function gameOver(square) {
     result.innerHTML = 'BOOM! Game Over!'
+    document.getElementById("gameoverStr").innerHTML = gameoverStr[randomInt(0, introStr.length-1)]
+    $('#poupGameover').show();
     soundGameover()
     isGameOver = true
 
