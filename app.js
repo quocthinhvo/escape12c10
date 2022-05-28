@@ -17,6 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
   let audioClick = new Audio('sound/click.mp3');
   let audioCheckmine = new Audio('sound/check_mine.mp3');
   let audioNomine = new Audio('sound/no_mine.mp3');
+  //random int
+  function randomInt(start, end) {
+    return Math.round(Math.random() * (start - end) + end)
+  }
   // config poup
   $('.hover_bkgr_fricc').show();
   $('.hover_bkgr_fricc').click(function () {
@@ -25,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
   $('.popupCloseButton').click(function () {
     $('.hover_bkgr_fricc').hide();
   });
+  // ngẫu nhiên câu chào
+  document.getElementById("introStr").innerHTML = introStr[randomInt(0, introStr.length-1)]
   
   function setTime() {
     if (!isGameOver & isGamestart) {
@@ -48,10 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   function soundNomine() {
     audioNomine.play();
-  }
-  //random int
-  function randomInt(start, end) {
-    return Math.round(Math.random() * (start - end) + end)
   }
 
   //create Board
