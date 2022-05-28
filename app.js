@@ -123,8 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (square.classList.contains('bomb')) {
       gameOver(square)
     } else {
-      //soundClick()
-      setTimeout(20, soundClick())
+      soundClick()
       let total = square.getAttribute('data')
       square.innerHTML = '<img src="skin/stu/' + randomInt(1,44) + '.png">'
       if (total !=0) {
