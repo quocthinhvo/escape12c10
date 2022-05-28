@@ -62,4 +62,20 @@ app.get("/ranks", function (req, res) {
    })
 })
 
+app.get("/user/:username", function (req, res) {
+   let username = req.params.username
+   let num = 10;
+   num = req.query.num;
+   Winner.find()
+   .find({
+      name: username
+   })
+   .limit(num)
+   .then((result)=>{
+      res.status(200).send(result)
+   })
+   .catch((err)=>{
+      res.status(500).send({message: "Some error with database"})
+   })
+})
 app.listen(8000);
