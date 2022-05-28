@@ -65,7 +65,7 @@ app.post('/add', cors(corsOptions), function (req, res) {
    }
 })
 
-app.get("/ranks",function (req, res) {
+app.get("/ranks",cors(corsOptions), function (req, res) {
    let top = req.query.top
    Winner.find()
    .limit(top)
@@ -80,7 +80,7 @@ app.get("/ranks",function (req, res) {
    })
 })
 
-app.get("/user/:username",function (req, res) {
+app.get("/user/:username", cors(corsOptions), function (req, res) {
    let username = req.params.username
    let num = 10;
    num = req.query.num;
