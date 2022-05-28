@@ -26,5 +26,6 @@ gameoverStr= [
     "Game này còn thua thì sao thi trên 5 hả em?",
     "Đọc sách giáo khoa không sao mà giải thắng được game này?",
     "Lại là em à Đoan Trường?",
-    "Đọc sách giáo khoa không thì sao mà thắng nổi"
+    "Đọc sách giáo khoa không thì sao mà thắng nổi",
+    "Tưởng dễ ăn vậy sao?"
 ]
