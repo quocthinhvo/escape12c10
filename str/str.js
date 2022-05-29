@@ -28,7 +28,11 @@ gameoverStr= [
     "Đọc sách giáo khoa không sao mà giải thắng được game này?",
     "Lại là em à Đoan Trường?",
     "Đọc sách giáo khoa không thì sao mà thắng nổi",
-    "Tưởng dễ ăn vậy sao?"
+    "Tưởng dễ ăn vậy sao?",
+    "Vừa bấm bừa chứ gì?",
+    "Có 4 đáp án ABCD mà lụi còn sai nói gì tới lụi cái này 😏",
+    "Thôi đừng buồn. Tôi biết trình của bạn chỉ tới đây thôi",
+    "Người ta có năng lực thì mới buồn :)))"
 ]
 
 winStr = [
@@ -36,5 +40,6 @@ winStr = [
     "Chơi game mà hên",
     "Không có lần thứ hai đâu",
     "Fact: người code ra game này chơi còn không thắng",
-    "Học phải đi đôi với ứng dụng vậy mới là giỏi"
+    "Học phải đi đôi với ứng dụng vậy mới là giỏi",
+    "Thầy Ngọc tự hào về trình độ toán ứng dụng của bạn"
 ]
