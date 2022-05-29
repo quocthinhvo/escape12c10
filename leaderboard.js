@@ -2,7 +2,7 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
   get: (searchParams, prop) => searchParams.get(prop),
 });
 
-let num = params.top || 10;
+let num = params.top || 100;
 
 function insertTable(i, data) {
   /*
