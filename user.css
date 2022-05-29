@@ -1,23 +1,23 @@
 
-#rank {
+#match {
     width: 100%;
 }
-#rank td,
-#rank th {
+#match td,
+#match th {
     border: 1px solid #ddd;
     padding: 8px;
     font-size: 15px;
 }
 
-#rank tr:nth-child(even) {
+#match tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-#rank tr:hover {
+#match tr:hover {
     background-color: #ddd;
 }
 
-#rank th {
+#match th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;

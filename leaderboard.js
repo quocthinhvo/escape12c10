@@ -13,7 +13,7 @@ function insertTable(i, data) {
   */
   let str = `
   <td>${i+1}</td>
-  <td><a href="user.html?username=${data.name}">${data.name}<a></td>
+  <td><a href="user.html?username=${data.name}&num=100">${data.name}<a></td>
   <td>${data.time}</td>
   <td>${data.date}</td>
   `;
