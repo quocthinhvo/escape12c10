@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
+  <meta name="description"
+    content="Một chiếc game nho nhỏ được tôi viết tặng các bạn và giáo viên đã đồng hành cùng lớp 12c10 (11c10 và 10c11) trong chặn đường 3 năm qua.">
   <title>Trốn thoát khỏi 12C10</title>
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="Escape12c10">
+  <meta itemprop="description" content="Một chiếc game nho nhỏ được tôi viết tặng các bạn và giáo viên đã đồng hành cùng lớp 12c10 (11c10 và 10c11) trong chặn đường 3 năm qua.">
+  <meta itemprop="image" content="img/banner.png">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Escape12c10">
+  <meta property="og:description" content="Một chiếc game nho nhỏ được tôi viết tặng các bạn và giáo viên đã đồng hành cùng lớp 12c10 (11c10 và 10c11) trong chặn đường 3 năm qua.">
+  <meta property="og:image" content="img/banner.png">
   <script src="bootstrap/js/jquery.min.js"></script>
-  <link rel="stylesheet" href="style.css"></link>
+  <link rel="stylesheet" href="style.css">
+  </link>
   <script src="str/str.js"></script>
   <script src="str/qoutes.js"></script>
   <script src="app.js" charset="utf-8"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <div class="hover_bkgr_fricc" id="poupIntro">
     <span class="helper"></span>
     <div>
-        <div class="popupCloseButton">&times;</div>
-        <p id="introStr"></p>
+      <div class="popupCloseButton">&times;</div>
+      <p id="introStr"></p>
     </div>
   </div>
   <div class="container">
-    <div class="topnav" >
+    <div class="topnav">
       <a href="index.html">New</a>
       <a href="leaderboard.html">Leaderboard</a>
       <a href="about.html">About</a>
@@ -39,10 +54,10 @@
   <div class="hover_bkgr_fricc" id="poupGameover">
     <span class="helper"></span>
     <div>
-        <div class="popupCloseButton">&times;</div>
-        <h3 style="color: red">Thua rồi hihi</h3>
-        <p id="gameoverStr"></p>
-        <button class="buttonPoup" onClick="location.reload();">Chơi lại</button>
+      <div class="popupCloseButton">&times;</div>
+      <h3 style="color: red">Thua rồi hihi</h3>
+      <p id="gameoverStr"></p>
+      <button class="buttonPoup" onClick="location.reload();">Chơi lại</button>
     </div>
   </div>
   <!-- <div class="hover_bkgr_fricc" id="poupWin">
@@ -57,16 +72,17 @@
   <div class="hover_bkgr_fricc_win" id="poupWin">
     <span class="helper"></span>
     <div>
-        <div class="popupCloseButton">&times;</div>
-        <h3 style="color: green">Thắng rồi đó</h3>
-        <p id="winStr"></p>
-        <form action="https://escape12c10.herokuapp.com/add", method="POST">
-          <input type="text" id="fname" name="name" required>
-          <input type="hidden" name="time" value="0" id="ftime">
-          <!-- <button class="buttonPoup" onClick="location.reload();">Chơi lại</button> -->
-          <input type="submit" value="Lưu kết quả" class="buttonPoup">
-        </form> 
+      <div class="popupCloseButton">&times;</div>
+      <h3 style="color: green">Thắng rồi đó</h3>
+      <p id="winStr"></p>
+      <form action="https://escape12c10.herokuapp.com/add" , method="POST">
+        <input type="text" id="fname" name="name" required>
+        <input type="hidden" name="time" value="0" id="ftime">
+        <!-- <button class="buttonPoup" onClick="location.reload();">Chơi lại</button> -->
+        <input type="submit" value="Lưu kết quả" class="buttonPoup">
+      </form>
     </div>
   </div>
 </body>
+
 </html>
